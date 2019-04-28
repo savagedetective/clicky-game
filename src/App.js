@@ -8,6 +8,9 @@ const App = () => {
   return (
     <div>
 
+      <Nav />
+      <Jumbotron />
+      
     </div>
   );
 }
