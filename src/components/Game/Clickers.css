@@ -1,0 +1,59 @@
+.color-holder {
+    width: 25%;
+    float: left;
+}
+
+.color-box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+#red-1 {
+    background-color:#ff0000;
+}
+
+#yellow-2 {
+    background-color:#ffff00;
+}
+
+#green-3 {
+    background-color: #00ff00;
+}
+
+#blue-4 {
+    background-color:#0000ff;
+}
+
+#magenta-5 {
+    background-color: #ff00ff;
+}
+
+#white-6 {
+    background-color: white;
+}
+
+#seaBreeze-7 {
+    background-color: #8cff94;
+}
+
+#salmon-8 {
+    background-color: #fd7697
+}
+
+#orange-9 {
+    background-color: #ff6600;
+}
+
+#purple-10 {
+    background-color: #6600ff;
+}
+
+#black-11 {
+    background-color: black;
+}
+
+#mustard-12 {
+    background-color: #ffcc00;
+}

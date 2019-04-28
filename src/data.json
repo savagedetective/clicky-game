@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "name": "red",
+        "color": "#ff0000"
+    },
+
+    {
+        "id": 2,
+        "name": "yellow",
+        "color": "#ffff00"
+    },
+
+    {
+        "id": 3,
+        "name": "green",
+        "color": "#00ff00"
+    },
+
+    {
+        "id": 4,
+        "name": "blue",
+        "color": "#0000ff"
+    },
+
+    {
+        "id": 5,
+        "name": "magenta",
+        "color": "#ff00ff"
+    },
+
+    {
+        "id": 6,
+        "name": "white",
+        "color": "#ffffff"
+    },
+
+    {
+        "id": 7,
+        "name": "seaBreeze",
+        "color": "#8cff94"
+    },
+
+    {
+        "id": 8,
+        "name": "salmon",
+        "color": "#fd7697"
+    },
+
+    {
+        "id": 9,
+        "name": "orange",
+        "color": "#ff6600"
+    },
+
+    {
+        "id": 10,
+        "name": "purple",
+        "color": "#6600ff"
+    },
+
+    {
+        "id": 11,
+        "name": "black",
+        "color": "#000000"
+    },
+
+    {
+        "id": 12,
+        "name": "mustard",
+        "color": "#ffcc00"
+    }
+]

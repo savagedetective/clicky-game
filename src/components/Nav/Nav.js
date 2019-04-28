@@ -1,15 +1,15 @@
 import React from "react";
 import "./Nav.css";
 
-const Nav = () => (
+const Nav = props => (
 
     <nav className="navbar">
 
         <ul>
 
             <li className="brand" href="/">Clicky Game</li>
-            <li>Click a colored box to play!</li>
-            <li>Score: 0 | High Score: 0</li>
+            <li>{props.words}</li>
+            <li>Score: {props.score} | High Score: {props.highScore}</li>
 
         </ul>
         

@@ -1,9 +1,10 @@
 import React from "react";
+import "./Clickers.css";
 
-export const Clickers = () => (
+export const Clickers = props => (
 
-    <nav className="">
-        <p>hello</p>
-    </nav>
+    <div className="clickers color-holder" onClick={() => props.handleClick(props.id)}>
+        <div className="color-box" id={props.name + "-" + props.id} name={props.name}></div>
+    </div>
 
 );
