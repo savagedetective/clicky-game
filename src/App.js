@@ -24,43 +24,93 @@ class App extends Component {
 
   //click handler
   handleClick = id => {
-    console.log(id + " has been clicked");
-    this.colorIsClicked(id);
-    this.toShuffle();
+
+    if (this.state.beenClicked.indexOf(id) === -1) {
+
+      console.log(id + " has been clicked");
+      this.colorIsClicked(id);
+      this.handleScoreIncrement();
+
+    } else {
+
+      this.handleGameReset();
+
+    }
+
   };
 
   //handles increment
-  handleIncrement = () => {
+  handleScoreIncrement = () => {
+
     let newScore = this.state.score + 1;
+
+    console.log("Point scored. New score is " + newScore);
+
+    this.setState({
+      score: newScore,
+      words: "Nice. Keep going!"
+    });
+
+    if (newScore >= this.state.highScore) {
+
+      this.setState({ highScore: newScore });
+
+    } else if (newScore === 12) {
+
+      this.setState({ words: "You won!" });
+
+    }
+
+    this.toShuffle();
+
+  }
+
+  handleGameReset = () => {
+
+    console.log("Game over. Game is resetting.");
+    this.clearBoard();
+    this.toShuffle();
+
   }
 
   //initiates shuffle function and sets newly shuffled of color divs to "state = Colors"
   toShuffle = () => {
-    console.log("Shuffling Color blocks");
+
+    console.log("Shuffling Color blocks.");
     this.setState({ Colors: this.shuffleTheDeck(Colors) });
+
   };
 
   //this function does the actual shuffling
   shuffleTheDeck(array) {
+
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+
   }
 
 
-  //helper function to clear arrays
-  clearClicked = () => {
-    console.log("beenClicked array is now cleared.");
-    this.setState({ beenClicked: [] });
+  //helper function to reset game state
+  clearBoard = () => {
+
+    console.log("Game is now reset.");
+    this.setState({
+      beenClicked: [],
+      words: "Click a color to play!",
+      score: 0
+    });
+
   }
 
   //helper function to add clicked Color to state's beenClicked array
-  colorIsClicked = (param) => {
+  colorIsClicked = id => {
+
+    this.setState({ beenClicked: this.state.beenClicked.concat(id) });
     console.log(this.state.beenClicked);
-    this.setState({ beenClicked: this.state.beenClicked.concat(param) });
-    console.log(this.state.beenClicked);
+
   }
 
 
